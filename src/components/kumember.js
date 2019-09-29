@@ -18,23 +18,14 @@ class Kumember extends Component {
 
     componentDidMount() {
         const editor = document.getElementById("kumember-editor");
-        const editorArea = editor.contentDocument.body;
-        var node = document.createElement("div");
-        node.setAttribute("id", "kumember-editor-content-area");
-        node.setAttribute("style", "height:100%")
-        node.setAttribute("contentEditable", "true")
-        editorArea.appendChild(node);
-
+        editor.contentDocument.designMode = "on"
         this.setState({
             editor
         })
     }
 
     executeCommand = (command, value) => {
-        this.state.editor.contentDocument.designMode = "on"
-        const editorText = this.state.editor.contentDocument.getElementById("kumember-editor-content-area")
-        editorText.execCommand(command, false, value)
-        this.state.editor.contentDocument.designMode = "off"
+        this.state.editor.contentDocument.execCommand(command, false, value)
     }
 
     render() {
