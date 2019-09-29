@@ -1,0 +1,13 @@
+@import '../themes.scss';
+
+.kumember-layout-container {
+    display : flex;
+    flex-direction : $container-flex-direction;
+    background-color: $container-background-color;
+    margin : $container-margin;
+    padding: $container-padding;
+    min-width: $container-min-width;
+    border : $container-border;
+    width: $container-width;
+    height: $container-height;
+}

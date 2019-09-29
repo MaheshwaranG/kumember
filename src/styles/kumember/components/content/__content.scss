@@ -1,0 +1,19 @@
+@import '../../themes.scss';
+
+.kumember-content-container{
+    display: flex;
+    min-height: $content-container-min-height;
+    background-color: $content-container-background-color;
+    margin : $content-container-margin;
+    padding: $content-container-padding;
+    border : $content-container-border;
+    height : $content-container-height;
+}
+
+.kumember-editor {
+    display : block;
+    width : $editor-width;
+    min-height: $editor-min-height;
+    background-color: $editor-background-color;
+    border : $editor-border;
+}
