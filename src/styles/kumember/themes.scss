@@ -1,53 +1,51 @@
 $primary-color: #651af0;
 $second-color-color: #d8128c;
-$border-radius : 0px;
+$border-radius: 0px;
 
 $container-background-color: #ffffff;
 $container-border: 1px solid $primary-color;
-$container-margin : 2px;
-$container-padding : 0px;
-$container-min-width : 80px;
-$container-width : 98%;
-$container-height : auto;
-$container-flex-direction : column;
-
+$container-margin: 2px;
+$container-padding: 0px;
+$container-min-width: 80px;
+$container-width: 98%;
+$container-height: auto;
+$container-flex-direction: column;
 
 $header-container-background-color: #e0e0e699;
-$header-container-flex-direction : row;
-$header-container-margin : 2px;
-$header-container-padding : 2px;
+$header-container-flex-direction: row;
+$header-container-margin: 2px;
+$header-container-padding: 2px;
 $header-container-border: 0px solid $primary-color;
-$header-container-justify-content : flex-start;
-$header-container-flex-wrap : wrap;
+$header-container-justify-content: flex-start;
+$header-container-flex-wrap: wrap;
 
-$header-items-background-color : #ffffff;
-$header-items-border : 0px solid $primary-color;
-$header-items-color : $primary-color;
-$header-items-padding : 6px 16px;
-$header-items-margin : 2px;
-$header-items-text-align : center;
-$header-items-text-decoration : none;
-$header-items-display : block;
-$header-items-font : normal normal bold 18px sans-serif;
-$header-items-cursor : pointer;
-$header-items-max-width : 60px;
-$header-items-text-overflow : ellipsis;
-$header-items-white-space : nowrap;
-$header-items-overflow : hidden;
-$header-items-width : auto;
-$header-items-hover-shadow : 0px 0px 20px 0px #888888; 
+$header-items-background-color: #ffffff;
+$header-items-border: 0px solid $primary-color;
+$header-items-color: $primary-color;
+$header-items-padding: 6px 16px;
+$header-items-margin: 2px;
+$header-items-text-align: center;
+$header-items-text-decoration: none;
+$header-items-display: block;
+$header-items-font: normal normal bold 18px sans-serif;
+$header-items-cursor: pointer;
+$header-items-max-width: 60px;
+$header-items-text-overflow: ellipsis;
+$header-items-white-space: nowrap;
+$header-items-overflow: hidden;
+$header-items-width: auto;
+$header-items-hover-shadow: 0px 0px 20px 0px #888888;
 
-
+$header-sub-items-font: normal normal bold 12px sans-serif;
 
 $content-container-background-color: #ffffff;
 $content-container-margin: 4px;
 $content-container-padding: 2px;
-$content-container-border:  0px solid $primary-color;
+$content-container-border: 0px solid $primary-color;
 $content-container-min-height: 120px;
-$content-container-height : calc(100vh - 85px);
+$content-container-height: calc(100vh - 85px);
 
-$editor-width : 100%;
+$editor-width: 100%;
 $editor-background-color: #ffffff;
-$editor-border:  0px solid #000000;
+$editor-border: 0px solid #000000;
 $editor-min-height: 120px;
-

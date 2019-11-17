@@ -1,34 +1,88 @@
-@import '../../themes.scss';
+@import "../../themes.scss";
 
 .kumember-header-container {
-    display : flex;
-    flex-direction : $header-container-flex-direction;
-    flex-wrap: $header-container-flex-wrap;
-    justify-content: $header-container-justify-content;
-    background-color: $header-container-background-color;
-    margin : $header-container-margin;
-    padding: $header-container-padding;
-    border : $header-container-border;
+  display: flex;
+  flex-direction: $header-container-flex-direction;
+  flex-wrap: $header-container-flex-wrap;
+  justify-content: $header-container-justify-content;
+  background-color: $header-container-background-color;
+  margin: $header-container-margin;
+  padding: $header-container-padding;
+  border: $header-container-border;
 
-    button {
-        width: $header-items-width;
-        background-color: $header-items-background-color; 
-        border: $header-items-border;
-        color: $header-items-color;
-        padding: $header-items-padding;
-        text-align: $header-items-text-align;
-        display: $header-items-display;
-        font: $header-items-font;
-        margin: $header-items-margin;
-        cursor: $header-items-cursor;
-        text-decoration: $header-items-text-decoration;
-        max-width: $header-items-max-width;
-        text-overflow: $header-items-text-overflow;
-        overflow: $header-items-overflow;
-        white-space: $header-items-white-space;
-    }
+  .main-button {
+    width: $header-items-width;
+    background-color: $header-items-background-color;
+    border: $header-items-border;
+    color: $header-items-color;
+    padding: $header-items-padding;
+    text-align: $header-items-text-align;
+    display: $header-items-display;
+    font: $header-items-font;
+    margin: $header-items-margin;
+    cursor: $header-items-cursor;
+    text-decoration: $header-items-text-decoration;
+    max-width: $header-items-max-width;
+    text-overflow: $header-items-text-overflow;
+    overflow: $header-items-overflow;
+    white-space: $header-items-white-space;
+    position: relative;
+  }
 
-    button:hover {
-        box-shadow: $header-items-hover-shadow;
-      }
+  .main-button:hover,
+  .main-div-containner:hover {
+    box-shadow: $header-items-hover-shadow;
+  }
+
+  .div-main-button {
+    width: $header-items-width;
+    background-color: $header-items-background-color;
+    border: $header-items-border;
+    color: $header-items-color;
+    padding: $header-items-padding;
+    text-align: $header-items-text-align;
+    display: $header-items-display;
+    font: $header-items-font;
+    margin: $header-items-margin;
+    cursor: $header-items-cursor;
+    text-decoration: $header-items-text-decoration;
+    max-width: $header-items-max-width;
+    text-overflow: $header-items-text-overflow;
+    overflow: $header-items-overflow;
+    white-space: $header-items-white-space;
+    position: relative;
+  }
+
+  .main-sub-button {
+    width: $header-items-width;
+    background-color: $header-items-background-color;
+    border: $header-items-border;
+    color: $header-items-color;
+    text-align: $header-items-text-align;
+    display: $header-items-display;
+    font: $header-sub-items-font;
+    margin: $header-items-margin;
+    cursor: $header-items-cursor;
+    text-decoration: $header-items-text-decoration;
+    max-width: $header-items-max-width;
+    text-overflow: $header-items-text-overflow;
+    overflow: $header-items-overflow;
+    white-space: $header-items-white-space;
+  }
+
+  .main-div-containner {
+    display: flex;
+    width: $header-items-width;
+    background-color: $header-items-background-color;
+    border: $header-items-border;
+    color: $header-items-color;
+    text-align: $header-items-text-align;
+    font: $header-items-font;
+    margin: $header-items-margin;
+    cursor: $header-items-cursor;
+    text-decoration: $header-items-text-decoration;
+    text-overflow: $header-items-text-overflow;
+    white-space: $header-items-white-space;
+    position: relative;
+  }
 }
