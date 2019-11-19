@@ -81,7 +81,7 @@ class FontSizeCommand extends Component {
           targetId="execcommand-fontsize"
           isOpen={this.state.isOptionsOpen}
           updatePropsState={this.updatePropsState}
-          popupWidth={"124px"}
+          popupWidth={124}
         >
           <SimpleList
             id="fontsize-option-list"

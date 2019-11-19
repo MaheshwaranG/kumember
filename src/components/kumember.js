@@ -6,13 +6,17 @@ import CopyComand from "./commands/CopyCommand";
 import CutCommand from "./commands/CutCommand";
 import HeaderCommand from "./commands/HeadersTag";
 import ForegroundColorCommand from "./commands/ForegroundColorCommand";
+import BackgroundColorCommand from "./commands/BackgroundColorCommand";
 
 class Kumember extends Component {
   constructor(props) {
     super(props);
     this.state = {
       editor: false,
-      isPopupOpen: false
+      isPopupOpen: false,
+
+      foreColor: "#000",
+      backColor: "#fff"
     };
   }
 
@@ -41,6 +45,18 @@ class Kumember extends Component {
   updatePopupState = status => {
     this.setState({
       isPopupOpen: status
+    });
+  };
+
+  onChangeBackColor = value => {
+    this.setState({
+      backColor: value
+    });
+  };
+
+  onChangeForeColor = value => {
+    this.setState({
+      foreColor: value
     });
   };
 
@@ -163,6 +179,16 @@ class Kumember extends Component {
           <ForegroundColorCommand
             executeCommand={this.executeCommand}
             updatePopupState={this.updatePopupState}
+            foreColor={this.state.foreColor}
+            backColor={this.state.backColor}
+            updatePropsState={this.onChangeForeColor}
+          />
+          <BackgroundColorCommand
+            executeCommand={this.executeCommand}
+            updatePopupState={this.updatePopupState}
+            foreColor={this.state.foreColor}
+            backColor={this.state.backColor}
+            updatePropsState={this.onChangeBackColor}
           />
 
           {/* <UndoCommand executeCommand={this.executeCommand} />

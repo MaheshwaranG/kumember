@@ -2,16 +2,15 @@ import React, { Component } from "react";
 import Popup from "../../MgComponents/Popup";
 import SimpleList from "../../MgComponents/SimpleList";
 
-class ForegroundColorCommand extends Component {
+class BackgroundColorCommand extends Component {
   constructor(props) {
     super(props);
     this.state = {
       currentColor: "#aa0"
     };
   }
-
   doActionOnClick = event => {
-    this.props.executeCommand("foreColor", `${this.props.foreColor}`);
+    this.props.executeCommand("backColor", `${this.props.backColor}`);
     if (event) {
       event.preventDefault();
     }
@@ -37,45 +36,40 @@ class ForegroundColorCommand extends Component {
   };
 
   onColorChange = event => {
-    // if (event.target.value) {
-    // this.setState({
-    //   currentColor: event.target.value
-    // });
     this.props.updatePropsState(event.target.value);
-    // }
   };
 
   render() {
     return (
-      <div className="main-div-containner" id="execcommand-forecolor">
+      <div className="main-div-containner" id="execcommand-backcolor">
         <div
           className="uppercase div-main-button"
-          name="forecolor"
+          name="backcolor"
           style={{
             color: this.props.foreColor,
             backgroundColor: this.props.backColor
           }}
           onClick={event => this.doActionOnClick(event)}
         >
-          {"A"}
+          {"B"}
         </div>
         <button
           className="main-sub-button"
-          name="forecolor-options"
-          id="execommand-forecolor-options"
+          name="backcolor-options"
+          id="execommand-backcolor-options"
           onClick={event => this.openHeaderOptions(event)}
         >
           <i className="fa fa-arrow-down" aria-hidden="true"></i>
         </button>
         <Popup
-          id="forecolor-popup-user-Profile"
-          targetId="execcommand-forecolor"
+          id="backcolor-popup-user-Profile"
+          targetId="execcommand-backcolor"
           isOpen={this.state.isOptionsOpen}
           updatePropsState={this.updatePropsState}
           popupWidth={124}
         >
           <input
-            value={this.props.foreColor}
+            value={this.props.backColor}
             onChange={event => {
               this.onColorChange(event);
             }}
@@ -95,4 +89,4 @@ class ForegroundColorCommand extends Component {
   }
 }
 
-export default ForegroundColorCommand;
+export default BackgroundColorCommand;

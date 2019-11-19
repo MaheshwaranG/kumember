@@ -18,13 +18,18 @@ class Popup extends Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps.isOpen !== this.props.isOpen) {
       let popup = document.getElementById(this.props.id);
+      let popupBackground = document.getElementById(
+        `${this.props.id}-background`
+      );
       if (nextProps.isOpen) {
         let target = document.getElementById(this.props.targetId);
         popup.style.top = target.offsetHeight + 5 + "px";
-        popup.style.right =
-          window.innerWidth + this.props.popupWidth - target.offsetLeft + "px";
+        // popup.style.right =
+        //   window.innerWidth + this.props.popupWidth - target.offsetLeft + "px";
+        popup.style.left = 0;
         popup.style.display = "block";
-        popup.style.width = this.props.popupWidth;
+        popupBackground.style.display = "block";
+        // popup.style.width = this.props.popupWidth;
         document.addEventListener("click", this.popupWindowClick);
         this.setState({ isOpen: nextProps.isOpen, isStateChanged: true });
         //   return { isOpen: nextProps.isOpen, isStateChanged: true };
@@ -33,6 +38,7 @@ class Popup extends Component {
           document.removeEventListener("click", this.popupWindowClick);
         }
         popup.style.display = "none";
+        popupBackground.style.display = "none";
       }
     }
   }
@@ -54,24 +60,37 @@ class Popup extends Component {
     }
   };
 
-  popupWindowClick = () => {
+  popupWindowClick = event => {
     let popup = document.getElementById(this.props.id);
-    popup.style.display = "none";
+    let popupBackground = document.getElementById(
+      `${this.props.id}-background`
+    );
+    if (event.target == popupBackground) {
+      popup.style.display = "none";
+      popupBackground.style.display = "none";
+      this.props.updatePropsState(false);
+    }
     // this.setState({ isOpen: false, isStateChanged: true });
-    this.props.updatePropsState(false);
+
     // document.removeEventListener("click", this.popupWindowClick);
   };
 
   onClickComponent = event => {};
   render() {
     return (
-      <div
-        className="mg-popup"
-        id={this.props.id}
-        style={{ top: 10 }}
-        onClick={event => this.onClickComponent}
-      >
-        <div>{this.props.children}</div>
+      <div>
+        <div
+          className="mg-popup"
+          id={this.props.id}
+          style={{ top: 10 }}
+          onClick={event => this.onClickComponent}
+        >
+          <div>{this.props.children}</div>
+        </div>
+        <div
+          className="mg-popup-background"
+          id={`${this.props.id}-background`}
+        ></div>
       </div>
     );
   }

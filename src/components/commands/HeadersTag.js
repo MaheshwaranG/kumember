@@ -88,7 +88,7 @@ class HeadersTag extends Component {
           targetId="execcommand-headers"
           isOpen={this.state.isOptionsOpen}
           updatePropsState={this.updatePropsState}
-          popupWidth={"124px"}
+          popupWidth={124}
         >
           <SimpleList
             id="header-option-list"
